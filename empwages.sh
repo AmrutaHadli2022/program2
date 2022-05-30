@@ -7,18 +7,20 @@ function MyFunction(){
     check=$((RANDOM%3))
     case $check in
 	$fullTime)
-		empHr=8;
+		empHr=12;
+	echo "Employee is fulltime worked for $empHr"
 	;;
 	$partTime)
-		empHr=4;
+		empHr=8;
+	echo "Employee is parttime worked for $empHr"
 	;;
 	*)
 		empHr=0;
+	echo "Employee is not worked"
 	;;
     esac
     salary=$(($empHr * $WagesPerHR))
     totalSalary=$(($totalSalary + $salary))
-    echo "Employee worked for $empHr Hour "
     echo "Daily employee wgaes is $totalSalary"
 }
 MyFunction
